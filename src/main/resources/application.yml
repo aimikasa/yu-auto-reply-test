@@ -35,7 +35,7 @@ task:
     - name: task1 #任务名
       monitor: zsxq #监控者
       answerer: openai #回答者
-      cron: '0/30 * * * * ?' #执行周期
+      cron: '0/3 * * * * ?' #执行周期
 #    - name: task2
 #      monitor: default
 #      answerer: default
