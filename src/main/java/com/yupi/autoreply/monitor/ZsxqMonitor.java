@@ -65,6 +65,7 @@ public class ZsxqMonitor extends Monitor {
             reqData.setImage_ids(new ArrayList<>());
             answerRequest.setReq_data(reqData);
             AnswerResponse answerResponse = zsxqApi.answer(answerRequest, cookie);
+            log.info("answerResponse.getRespData() = " + answerResponse.getRespData());
             if (answerResponse.isSucceeded()) {
                 log.info("{} 回答成功 \n 问题：{} \n 回答：{}", taskName, question, answer);
             } else {
