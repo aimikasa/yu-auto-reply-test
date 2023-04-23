@@ -33,9 +33,9 @@ public class OpenAiApi {
         String url = "https://api.openai.com/v1/completions";
         String json = JSONUtil.toJsonStr(request);
         String result = HttpRequest.post(url)
-                .timeout(9999999)
-                .setConnectionTimeout(9999999)
-                .setReadTimeout(9999999)
+                .timeout(60000)
+                .setConnectionTimeout(60000)
+                .setReadTimeout(60000)
                 .header("Authorization", "Bearer " + openAiApiKey)
                 .body(json)
                 .execute()
